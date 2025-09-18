@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Display all active IPv4 addresses (including localhost) one per line
 # Uses `ip` which is available on modern Linux systems
-ip -4 addr show | awk '/\binet\b/{print $2}' | cut -d/ -f1
+ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}'

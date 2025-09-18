@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Configures the /etc/hosts file to redirect localhost and facebook.com
+
+# Add the new mappings to the /etc/hosts file
+echo -e "127.0.0.2\tlocalhost\n8.8.8.8\tfacebook.com" >> /etc/hosts
